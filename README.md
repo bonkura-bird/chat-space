@@ -13,6 +13,18 @@ Things you may want to cover:
 
 * Database creation
 
+
+## groups_usersテーブル
+
+|Columun|Type|Options|
+|-------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, goreign_key: true|
+
+###Association
+- belongs_to :group
+- belings_to :user
+
 * Database initialization
 
 * How to run the test suite
