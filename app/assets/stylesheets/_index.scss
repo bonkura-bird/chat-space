@@ -1,0 +1,32 @@
+.wrapper{
+  display: flex;
+  .SideBar{
+    width: 300px;
+    height: 100vh;
+    background-color: #253141;
+    .LeftHeader{
+      height: 100px;
+    }
+    .GroupList{
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+    }
+  }
+  .MainChat{
+    width: calc(100vw - 300px);
+    height: 100vh;
+    background-color: #ffffff;
+    .RightHeader{
+      height: 100px;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .MessageList{
+      height: calc(100vh - 190px);
+      background-color: #fafafa;
+    }
+    .Footer{
+      height: 90px;
+      background-color: #d2d2d2;
+    }
+  }
+}
