@@ -13,6 +13,12 @@
         height: 20px;
         background-color: #d8d8d8;
         margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        &__userName{}
+        &__iconBox{
+          width: 60px;
+        }
       }
     }
     .GroupList{
