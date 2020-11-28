@@ -115,15 +115,40 @@
     .Footer{
       height: 90px;
       background-color: #d2d2d2;
+      padding: 20px 40px;
       .Form{
+        display: flex;
+        justify-content: space-between;
         &__area{
+          height: 50px;
+          width: 100%;
+          background-color: #fff;
+          position: relative;
         }
-        &__text{}
+        &__text{
+          border: none;
+          height: 50px;
+          width: 100%;
+          padding-left: 10px;
+        }
         &__image{
+          position: absolute;
+          right: 10px;
+          line-height: 50px;
           &__icon{}
-          &__file{}
+          &__file{
+            display: none;
+          }
         }
-        &__submit{}
+        &__submit{
+          height: 50px;
+          padding: 0 30px;
+          color: #fff;
+          background-color: #38aef0;
+          font-size: 16px;
+          border: none;
+          margin-left: 15px;
+        }
       }
     }
   }
