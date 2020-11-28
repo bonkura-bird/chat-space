@@ -90,6 +90,27 @@
     .MessageList{
       height: calc(100vh - 190px);
       background-color: #fafafa;
+      padding-top: 35px;
+      &__messageBox{
+        margin-left: 40px;
+      }
+      &__name{
+        display: flex;
+        font-size: 16px;
+        font-weight: bolder;
+        color: #333333;
+      }
+      &__date{
+        font-size: 12px;
+        margin-left: 10px;
+        font-weight: normal;
+        color: #999999;
+      }
+      &__message{
+        font-size: 14px;
+        color: #434A54;
+        margin: 12px 0 46px;
+      }
     }
     .Footer{
       height: 90px;
