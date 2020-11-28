@@ -12,14 +12,14 @@
       %ul.MessageList__name
         karikari
         %li.MessageList__date
-          2020/11/28(Sut) 14:01
+          2020年11月28日 11時55分
       .MessageList__message
         おはよう！
     .MessageList__messageBox
       %ul.MessageList__name
         karikari
         %li.MessageList__date
-          2020/11/28(Sut) 14:01
+          2020年11月28日 11時55分
       .MessageList__message
         aaaaaaaaaaaaaaaaaaa
         %br/
@@ -29,3 +29,10 @@
         %br/
         aaaaaaaaaaaaaaaaaaaaaaaaaaa！
   .Footer
+    %form.Form
+      .Form__area
+        %input.Form__text{"placeholder": "type a message", "type": "text"}
+        %label{class: "Form__image"}
+          = icon('far', 'image',class: 'Form__image__icon')
+          %input.Form__image__file{"type": "file"}
+      %input.Form__submit{ "type": "submit", "value": "Send"}

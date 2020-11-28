@@ -115,6 +115,16 @@
     .Footer{
       height: 90px;
       background-color: #d2d2d2;
+      .Form{
+        &__area{
+        }
+        &__text{}
+        &__image{
+          &__icon{}
+          &__file{}
+        }
+        &__submit{}
+      }
     }
   }
 }
