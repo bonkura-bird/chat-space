@@ -59,6 +59,32 @@
     .RightHeader{
       height: 100px;
       border-bottom: 1px solid #eeeeee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      &__leftBox{}
+      &__currentGroup{
+        color: #333333;
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+      &__memberList{
+        color: #999999;
+        font-size: 12px;
+        display: flex;
+      }
+      &__member{
+        margin-left: 5px;
+
+      }
+      &__editBtn{
+        height: 40px;
+        width: 70px;
+        font-size: 16px;
+        color: #38aef0;
+        border: 1px solid #38aef0;
+      }
     }
     .MessageList{
       height: calc(100vh - 190px);
