@@ -2,8 +2,12 @@
   .LeftHeader
     .LeftHeader__list
       %p.LeftHeader__userName kami
-      %ul.LeftHeader__iconBox
-        = LeftHeader__icon('far', 'edit')
-        = LeftHeader__icon('fas', 'cog')
+      .LeftHeader__iconBox
+        = link_to "#", class: "LeftHeader__iconBtn" do
+          = icon('far', 'edit', class: 'LeftHeader__icon')
+          %span<>
+        = link_to "#", class: "LeftHeader__iconBtn" do
+          = icon('fas', 'cog', class: 'LeftHeader__icon')
+          %span<>
 
   .GroupList

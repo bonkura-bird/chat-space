@@ -11,19 +11,30 @@
       &__list{ 
         width: 260px;
         height: 20px;
-        background-color: #d8d8d8;
         margin: 0 20px;
         display: flex;
         justify-content: space-between;
-        &__userName{}
-        &__iconBox{
-          width: 60px;
-          &__icon{
-            
-          }
-        }
       }
+      &__userName{
+        color: #ffffff;
+        font-size: 16px;
+      }
+      &__iconBox{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      &__iconBtn{
+        margin-left: 5px;
+      }
+      &__icon{
+        color: #ffffff;
+      }
+
     }
+
+
     .GroupList{
       height: calc(100vh - 100px);
       background-color: #2f3e51;
@@ -46,4 +57,7 @@
       background-color: #d2d2d2;
     }
   }
+}
+.far fa-edit LeftHeader__icon{
+  color: red;
 }
