@@ -60,13 +60,11 @@
       height: 100px;
       border-bottom: 1px solid #eeeeee;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       padding: 0 40px;
-      &__leftBox{}
       &__currentGroup{
         color: #333333;
-        margin-bottom: 15px;
+        margin: 35px 0 15px 0;
         font-size: 20px;
       }
       &__memberList{
@@ -79,11 +77,14 @@
 
       }
       &__editBtn{
+        display: block;
         height: 40px;
-        width: 70px;
         font-size: 16px;
         color: #38aef0;
         border: 1px solid #38aef0;
+        padding: 0 20px;
+        line-height: 40px;
+        margin-top: 28px;
       }
     }
     .MessageList{
