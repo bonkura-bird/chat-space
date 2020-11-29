@@ -1,0 +1,49 @@
+.SideBar{
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+}
+.LeftHeader{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  &__list{ 
+    width: 260px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+  }
+  &__userName{
+    color: $white;
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  &__iconBox{
+    width: 60px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__iconBtn{
+    margin-left: 5px;
+  }
+  &__icon{
+    color: $white;
+  }
+}
+.GroupList{
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  &__box{
+    padding: 20px 20px 40px 20px;
+  }
+  &__name{
+    color: $white;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  &__recentMessage{
+    color: $white;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,22 @@
+.SideBar
+  .LeftHeader
+    .LeftHeader__list
+      %p.LeftHeader__userName kami
+      .LeftHeader__iconBox
+        = link_to "#", class: "LeftHeader__iconBtn" do
+          = icon('fas', 'edit', class: 'LeftHeader__icon')
+          %span<>
+        = link_to "#", class: "LeftHeader__iconBtn" do
+          = icon('fas', 'cog', class: 'LeftHeader__icon')
+          %span<>
+
+  .GroupList
+    .GroupList__box
+      %p.GroupList__name techcamp
+      %p.GroupList__recentMessage まだメッセージがありません
+    .GroupList__box
+      %p.GroupList__name techcamp
+      %p.GroupList__recentMessage まだメッセージがありません
+    .GroupList__box
+      %p.GroupList__name techcamp
+      %p.GroupList__recentMessage まだメッセージがありません

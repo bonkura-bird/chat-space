@@ -1,0 +1,98 @@
+.MainChat{
+  width: calc(100vw - 300px);
+  height: 100vh;
+  background-color: $white;
+}
+.RightHeader{
+  height: 100px;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  &__currentGroup{
+    color: #333333;
+    font-size: 20px;
+    margin: 35px 0 15px 0;
+  }
+  &__memberList{
+    color: #999999;
+    font-size: 12px;
+    display: flex;
+  }
+  &__member{
+    margin-left: 5px;
+  }
+  &__editBtn{
+    height: 40px;
+    line-height: 40px;
+    color: #38aef0;
+    text-decoration: none ;
+    font-size: 16px;
+    border: 1px solid #38aef0;
+    padding: 0 20px;
+    margin-top: 28px;
+  }
+}
+.MessageList{
+  height: calc(100vh - 190px);
+  background-color: #fafafa;
+  padding-top: 35px;
+  &__messageBox{
+    margin-left: 40px;
+  }
+  &__name{
+    color: #333333;
+    font-size: 16px;
+    font-weight: bolder;
+    display: flex;
+  }
+  &__date{
+    color: #999999;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 10px;
+  }
+  &__message{
+    color: #434A54;
+    font-size: 14px;
+    margin: 12px 0 46px;
+  }
+}
+.Footer{
+  height: 90px;
+  background-color: #d2d2d2;
+  padding: 20px 40px;
+  .Form{
+    display: flex;
+    justify-content: space-between;
+    &__area{
+      height: 50px;
+      width: 100%;
+      background-color: $white;
+      position: relative;
+    }
+    &__text{
+      height: 50px;
+      width: 100%;
+      border: none;
+      padding-left: 10px;
+    }
+    &__image{
+      line-height: 50px;
+      position: absolute;
+      right: 10px;
+        &__file{
+          display: none;
+        }
+    }
+    &__submit{
+      height: 50px;
+      color: $white;
+      background-color: #38aef0;
+      font-size: 16px;
+      border: none;
+      padding: 0 30px;
+      margin-left: 15px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.MainChat
+  .RightHeader
+    .RightHeader__leftBox
+      .RightHeader__currentGroup kari
+      %ul.RightHeader__memberList
+        Member :
+        %li.RightHeader__member kami
+    = link_to "#", class: "RightHeader__editBtn" do
+      Edit
+  .MessageList
+    .MessageList__messageBox
+      %ul.MessageList__name
+        karikari
+        %li.MessageList__date
+          2020年11月28日 11時55分
+      .MessageList__message
+        おはよう！
+    .MessageList__messageBox
+      %ul.MessageList__name
+        karikari
+        %li.MessageList__date
+          2020年11月28日 11時55分
+      .MessageList__message
+        aaaaaaaaaaaaaaaaaaa
+        %br/
+        aaaaaaaaaaaaaaaa
+        %br/ 
+        aaaaaaaaaaaa
+        %br/
+        aaaaaaaaaaaaaaaaaaaaaaaaaaa！
+  .Footer
+    %form.Form
+      .Form__area
+        %input.Form__text{"placeholder": "type a message", "type": "text"}
+        %label{class: "Form__image"}
+          = icon('far', 'image',class: 'Form__image__icon')
+          %input.Form__image__file{"type": "file"}
+      %input.Form__submit{ "type": "submit", "value": "Send"}
