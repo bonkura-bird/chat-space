@@ -1,12 +1,13 @@
 .SideBar
   .LeftHeader
     .LeftHeader__list
-      %p.LeftHeader__userName kami
+      %p.LeftHeader__userName 
+        #{current_user.name}
       .LeftHeader__iconBox
         = link_to "#", class: "LeftHeader__iconBtn" do
           = icon('fas', 'edit', class: 'LeftHeader__icon')
           %span<>
-        = link_to "#", class: "LeftHeader__iconBtn" do
+        = link_to "users/edit", class: "LeftHeader__iconBtn" do
           = icon('fas', 'cog', class: 'LeftHeader__icon')
           %span<>
 
