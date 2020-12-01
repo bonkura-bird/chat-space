@@ -1,13 +1,16 @@
 .SideBar
   .LeftHeader
     .LeftHeader__list
-      %p.LeftHeader__userName kami
-      .LeftHeader__iconBox
-        = link_to "#", class: "LeftHeader__iconBtn" do
-          = icon('fas', 'edit', class: 'LeftHeader__icon')
+      %p.LeftHeader__userName 
+        = current_user.name
+      %ul.LeftHeader__iconBox
+        %li.LeftHeader__iconBtn
+          = link_to "#" do
+            = icon('fas', 'edit', class: 'LeftHeader__icon')
           %span<>
-        = link_to "#", class: "LeftHeader__iconBtn" do
-          = icon('fas', 'cog', class: 'LeftHeader__icon')
+        %li.LeftHeader__iconBtn
+          = link_to  edit_user_path(current_user.id) do
+            = icon('fas', 'cog', class: 'LeftHeader__icon')
           %span<>
 
   .GroupList
