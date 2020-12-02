@@ -5,7 +5,7 @@
         = current_user.name
       %ul.LeftHeader__iconBox
         %li.LeftHeader__iconBtn
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit', class: 'LeftHeader__icon')
           %span<>
         %li.LeftHeader__iconBtn
@@ -14,12 +14,10 @@
           %span<>
 
   .GroupList
-    .GroupList__box
-      %p.GroupList__name techcamp
-      %p.GroupList__recentMessage まだメッセージがありません
-    .GroupList__box
-      %p.GroupList__name techcamp
-      %p.GroupList__recentMessage まだメッセージがありません
-    .GroupList__box
-      %p.GroupList__name techcamp
-      %p.GroupList__recentMessage まだメッセージがありません
+    - current_user.groups.each do |group|
+      .GroupList__box
+        = link_to '#' do
+          .GroupList__name 
+            = group.name
+          .GroupList__recentMessage
+            まだメッセージがありません
