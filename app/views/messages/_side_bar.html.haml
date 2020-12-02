@@ -16,7 +16,7 @@
   .GroupList
     - current_user.groups.each do |group|
       .GroupList__box
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .GroupList__name 
             = group.name
           .GroupList__recentMessage

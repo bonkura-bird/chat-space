@@ -8,31 +8,13 @@
     = link_to "#", class: "RightHeader__editBtn" do
       Edit
   .MessageList
-    .MessageList__messageBox
-      %ul.MessageList__name
-        karikari
-        %li.MessageList__date
-          2020年11月28日 11時55分
-      .MessageList__message
-        おはよう！
-    .MessageList__messageBox
-      %ul.MessageList__name
-        karikari
-        %li.MessageList__date
-          2020年11月28日 11時55分
-      .MessageList__message
-        aaaaaaaaaaaaaaaaaaa
-        %br/
-        aaaaaaaaaaaaaaaa
-        %br/ 
-        aaaaaaaaaaaa
-        %br/
-        aaaaaaaaaaaaaaaaaaaaaaaaaaa！
+    = render @messages
+
   .Footer
-    %form.Form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__area
-        %input.Form__text{"placeholder": "type a message", "type": "text"}
-        %label{class: "Form__image"}
+        = f.text_field :body, class: 'Form__text', placeholder: 'type a message'
+        = f.label :image, class: "Form__image" do
           = icon('far', 'image',class: 'Form__image__icon')
-          %input.Form__image__file{"type": "file"}
-      %input.Form__submit{ "type": "submit", "value": "Send"}
+          = f.file_field :image, class: 'Form__image__file'
+      = f.submit "Send", class: "Form__submit"
