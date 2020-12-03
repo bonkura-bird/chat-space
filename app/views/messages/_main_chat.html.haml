@@ -1,12 +1,17 @@
 .MainChat
   .RightHeader
     .RightHeader__leftBox
-      .RightHeader__currentGroup kari
+      .RightHeader__currentGroup 
+        = @group.name
       %ul.RightHeader__memberList
         Member :
-        %li.RightHeader__member kami
+        %li.RightHeader__member 
+          - @group.users.each do |user|
+            = user.name
+
     = link_to "#", class: "RightHeader__editBtn" do
       Edit
+
   .MessageList
     = render @messages
 
