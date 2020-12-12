@@ -43,6 +43,8 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
+      $('.MessageList').append(html);
+      $('.Form')[0].reset();
     })
   });
 });
