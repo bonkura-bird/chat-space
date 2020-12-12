@@ -45,6 +45,7 @@ $(function(){
       let html = buildHTML(data);
       $('.MessageList').append(html);
       $('.Form')[0].reset();
+      $('.MessageList').animate({ scrollTop: $('.MessageList')[0].scrollHeight});
     })
   });
 });
