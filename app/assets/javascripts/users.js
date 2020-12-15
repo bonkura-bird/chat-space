@@ -61,4 +61,7 @@ $(function(){
     let userId = $(this).data("user-id");
     migrateUser(userName, userId);
   });
+  $(".ChatMembers").on("click", ".ChatMember__remove", function() {
+    $(this).parent().remove(".ChatMember");
+  });
 });
