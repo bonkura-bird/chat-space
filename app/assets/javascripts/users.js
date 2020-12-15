@@ -18,6 +18,18 @@ $(function(){
     $("#UserSearchResult").append(html);
   }
 
+  function  migrateUser(userName, userId){
+    let html = `
+                <div class="ChatMember">
+                  <p class="ChatMember__name">${userName}</p>
+                  <input name="group[user_ids][]" type="hidden" value="${userId}" />
+                  <div class="ChatMember__remove ChatMember__button">削除</div>
+                </div>
+                `;
+  $(".ChatMembers").append(html)
+  console.log(group[user_ids]);
+}
+
   $("#UserSearch__field").on("keyup", function() {
     let input = $("#UserSearch__field").val();
     $.ajax({
@@ -43,7 +55,10 @@ $(function(){
     });
   })
 
-  $("#UserSearchResult").on("click", ".ChatMember", function(){
-    $(this).remove(".ChatMember");
+  $("#UserSearchResult").on("click", ".ChatMember__add", function(){
+    $(this).parent().remove(".ChatMember");
+    let userName = $(this).data("user-name");
+    let userId = $(this).data("user-id");
+    migrateUser(userName, userId);
   });
 });
