@@ -27,7 +27,6 @@ $(function(){
                 </div>
                 `;
   $(".ChatMembers").append(html)
-  console.log(group[user_ids]);
 }
 
   $("#UserSearch__field").on("keyup", function() {
