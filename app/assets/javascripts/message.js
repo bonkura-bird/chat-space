@@ -1,8 +1,8 @@
 $(function(){
-  let last_message_id = $('.MessageList__messageBox:last').data("message-id") || 0;
+
   function buildHTML(message){
     if (message.image) {
-      let html = `<div class="MessageList__messageBox">
+      let html = `<div class="MessageList__messageBox" data-message-id=${message.id}>
                     <div class="MessageList__name">
                     ${message.user_name}
                       <div class="MessageList__date">
@@ -16,7 +16,7 @@ $(function(){
                   </div>`
        return html;
     } else {
-      let html = `<div class="MessageList__messageBox">
+      let html = `<div class="MessageList__messageBox" data-message-id=${message.id}>
                     <div class="MessageList__name">
                     ${message.user_name}
                       <div class="MessageList__date">
@@ -53,5 +53,30 @@ $(function(){
       alert("メッセージ送信に失敗しました");
       $('.Form__submit').prop('disabled', false);
     });
+  });
+  let reloadMessages = function() {
+    let last_message_id = $('.MessageList__messageBox:last').data("message-id") || 0;
+    $.ajax({
+      url: "api/messages",
+      type: 'GET',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      if (messages.length !== 0) {
+        let insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.MessageList').append(insertHTML)
+      }
+    })
+    .fail(function() {
+      alert('error');
+    });
+
+  };
+  $(function() {
+    setInterval(reloadMessages, 7000);
   });
 });
