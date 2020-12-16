@@ -1,4 +1,5 @@
 $(function(){
+  let last_message_id = $('.MessageList__messageBox:last').data("message-id") || 0;
   function buildHTML(message){
     if (message.image) {
       let html = `<div class="MessageList__messageBox">
