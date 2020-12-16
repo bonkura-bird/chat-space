@@ -69,6 +69,7 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         $('.MessageList').append(insertHTML)
+        $('.MessageList').animate({ scrollTop: $('.MessageList')[0].scrollHeight});
       }
     })
     .fail(function() {
