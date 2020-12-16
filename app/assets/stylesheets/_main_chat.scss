@@ -79,12 +79,16 @@
       padding-left: 10px;
     }
     &__image{
-      line-height: 50px;
+      height: 50px;
       position: absolute;
       right: 10px;
         &__file{
           display: none;
         }
+      &__icon{
+        line-height: 50px;
+        font-size: 25px;
+      }
     }
     &__submit{
       height: 50px;
