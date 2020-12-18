@@ -66,3 +66,9 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'jquery-rails'
+
+gem 'kgio','2.11.3'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
